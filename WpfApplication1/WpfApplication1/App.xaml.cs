@@ -9,7 +9,7 @@ using System.Windows;
 namespace WpfApplication1
 {
     /// <summary>
-    /// Interaction logic for App.xaml
+    /// Interaction logic for App
     /// </summary>
     public partial class App : Application
     {
