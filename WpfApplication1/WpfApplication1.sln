@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{EEC483B0-F8AA-4FAA-A701-ACFBA2BA024B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "presentation-editor", "WpfApplication1\presentation-editor.csproj", "{EEC483B0-F8AA-4FAA-A701-ACFBA2BA024B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D5CC5333-28D3-45F4-B3F5-4FFD5484DBD8}"
 	ProjectSection(SolutionItems) = preProject
