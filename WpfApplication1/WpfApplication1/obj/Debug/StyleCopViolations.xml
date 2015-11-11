@@ -1,1 +1,3 @@
-<StyleCopViolations />
+<StyleCopViolations>
+  <Violation Section="Root.[assembly: Guid(&quot;330c6406-bb75-4aca-aa9e-659466a52f54&quot;)]" LineNumber="31" Source="D:\AYТС\5 семестр\СТП\presentation-editor\WpfApplication1\WpfApplication1\Properties\AssemblyInfo.cs" RuleNamespace="StyleCopPlus.StyleCopPlusRules" Rule="CheckWhetherLastCodeLineIsEmpty" RuleId="SP2002">The last code line should always end with a line break.</Violation>
+</StyleCopViolations>

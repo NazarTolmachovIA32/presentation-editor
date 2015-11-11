@@ -1,0 +1,52 @@
+version: 0.0.{build}
+before_build:
+- ps: >-
+    cd C:\projects\Presentation-Editor
+
+    $VerFromAssemblyInfo = get-content SharedAssemblyInfo.cs
+
+    $InstallScript = get-content Install\InstallPresentation-EditorUnicode.iss
+
+    $VerFromAssemblyInfo[26][27]
+
+    $i = 27
+
+    $verString = ""
+
+    do
+    	{
+    	$verString = $verString + $VerFromAssemblyInfo[26][$i]
+    	$i = $i + 1
+    	}
+    while($VerFromAssemblyInfo[26][$i] -ne ')')
+
+    $verString
+
+    $InstallScript[2]
+
+    $InstallScript[2] = "#define Version " + $verString
+
+    $InstallScript[2]
+
+    $InstallScript | set-content Install\InstallPresentation-EditorUnicode.iss
+build:
+  verbosity: minimal
+after_build:
+- cmd: packages\Tools.InnoSetup.5.5.6\tools\ISCC Install\InstallPresentation-EditorUnicode.iss
+artifacts:
+- path: Presentation-Editor\Install\Installer
+  type: WebDeployPackage
+deploy:
+- provider: GitHub
+  tag: $(APPVEYOR_REPO_TAG_NAME)
+  release: $(APPVEYOR_REPO_TAG_NAME)
+  description: Release from appveyor
+  auth_token:
+    secure: En6c5nyOvTZxLdBvttixnk1oKGtg9+xPmVqBQjiF7N3V30oCm5T8wTaT1WevYZ65
+  artifact: Presentation-Editor\Install\Installer.zip
+  draft: false
+  prerelease: false
+  on:
+    branch: master
+    appveyor_repo_tag: true
+  
