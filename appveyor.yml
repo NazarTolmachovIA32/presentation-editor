@@ -1,7 +1,7 @@
 version: 0.0.{build}
 before_build:
 - ps: >-
-    cd C:\projects\Presentation-Editor
+    cd D:\AYТС\5 семестр\СТП\presentation-editor\WpfApplication1
 
     $VerFromAssemblyInfo = get-content SharedAssemblyInfo.cs
 
