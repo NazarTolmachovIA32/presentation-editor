@@ -1,7 +1,6 @@
 version: 0.0.{build}
 before_build:
 - ps: >-
-    cd D:\AYТС\5 семестр\СТП\presentation-editor\WpfApplication1
 
     $VerFromAssemblyInfo = get-content SharedAssemblyInfo.cs
 
@@ -14,10 +13,10 @@ before_build:
     $verString = ""
 
     do
-    	{
-    	$verString = $verString + $VerFromAssemblyInfo[26][$i]
-    	$i = $i + 1
-    	}
+    {
+    $verString = $verString + $VerFromAssemblyInfo[26][$i]
+    $i = $i + 1
+    } 
     while($VerFromAssemblyInfo[26][$i] -ne ')')
 
     $verString
