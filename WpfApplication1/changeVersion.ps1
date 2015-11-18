@@ -1,5 +1,5 @@
 $VerFromAssemblyInfo = get-content SharedAssemblyInfo.cs
-$InstallScript = get-content Install\installscriptMemoNoteUnicode.iss
+$InstallScript = get-content Install\InstallPresentation-EditorUnicode.iss
 $VerFromAssemblyInfo[26][27]
 $i = 27
 $verString = ""
@@ -13,6 +13,6 @@ $verString
 $InstallScript[2]
 $InstallScript[2] = "#define Version " + $verString
 $InstallScript[2]
-$InstallScript | set-content Install\installscriptMemoNoteUnicode.iss
+$InstallScript | set-content Install\InstallPresentation-EditorUnicode.iss
 
   
