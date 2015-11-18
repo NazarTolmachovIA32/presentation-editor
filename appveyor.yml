@@ -1,8 +1,9 @@
 version: 0.0.{build}
 before_build:
 - ps: >-
+    cd  D:\AYТС\5 семестр\СТП\presentation-editor
 
-    $VerFromAssemblyInfo = get-content D:\AYТС\5 семестр\СТП\presentation-editor\WpfApplication1\SharedAssemblyInfo.cs
+    $VerFromAssemblyInfo = get-content WpfApplication1\SharedAssemblyInfo.cs
 
     $InstallScript = get-content Install\InstallPresentation-EditorUnicode.iss
 
