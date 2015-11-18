@@ -13,10 +13,10 @@ before_build:
     $verString = ""
 
     do
-    {
-    $verString = $verString + $VerFromAssemblyInfo[26][$i]
-    $i = $i + 1
-    } 
+        {
+    	$verString = $verString + $VerFromAssemblyInfo[26][$i]
+    	$i = $i + 1
+    	}
     while($VerFromAssemblyInfo[26][$i] -ne ')')
 
     $verString
