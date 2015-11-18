@@ -1,4 +1,4 @@
-$VerFromAssemblyInfo = get-content WpfApplication1\SharedAssemblyInfo.cs
+$VerFromAssemblyInfo = get-content SharedAssemblyInfo.cs
 $InstallScript = get-content Install\InstallPresentation-EditorUnicode.iss
 $VerFromAssemblyInfo[26][27]
 $i = 27
