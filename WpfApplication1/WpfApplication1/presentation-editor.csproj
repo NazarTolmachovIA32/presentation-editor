@@ -107,6 +107,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="PESTRONGNAMEKEY.pfx" />
+	<None Include="keycode.pfx"/>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
